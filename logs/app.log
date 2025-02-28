@@ -1,0 +1,698 @@
+2025-02-27 23:21:56,664 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-27 23:21:56,664 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-27 23:21:56,665 - INFO -  * Restarting with stat
+2025-02-27 23:21:57,116 - WARNING -  * Debugger is active!
+2025-02-27 23:21:57,118 - INFO -  * Debugger PIN: 925-279-468
+2025-02-27 23:22:25,134 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:25] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-27 23:22:30,278 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:30] "GET /login HTTP/1.1" 200 -
+2025-02-27 23:22:30,330 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:30] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-27 23:22:38,295 - INFO - BEGIN (implicit)
+2025-02-27 23:22:38,299 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-27 23:22:38,299 - INFO - [generated in 0.00059s] ('ahmed', 1, 0)
+2025-02-27 23:22:38,421 - INFO - User 'ahmed' logged in successfully.
+2025-02-27 23:22:38,422 - INFO - ROLLBACK
+2025-02-27 23:22:38,422 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:38] "POST /auth/login HTTP/1.1" 200 -
+2025-02-27 23:22:40,642 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:40] "GET /dashboard HTTP/1.1" 200 -
+2025-02-27 23:22:40,661 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-27 23:22:40,675 - INFO - BEGIN (implicit)
+2025-02-27 23:22:40,679 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-27 23:22:40,680 - INFO - [generated in 0.00076s] ('1da4de08-a717-4c2a-991b-b7d8c0f01214',)
+2025-02-27 23:22:40,684 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-27 23:22:40,684 - INFO - [generated in 0.00074s] ('ahmed',)
+2025-02-27 23:22:40,691 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-27 23:22:40,693 - INFO - [generated in 0.00151s] ('ahmed',)
+2025-02-27 23:22:40,693 - INFO - ROLLBACK
+2025-02-27 23:22:40,695 - INFO - 127.0.0.1 - - [27/Feb/2025 23:22:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:30:50,320 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-28 08:30:50,320 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 08:30:50,322 - INFO -  * Restarting with stat
+2025-02-28 08:30:50,937 - WARNING -  * Debugger is active!
+2025-02-28 08:30:50,939 - INFO -  * Debugger PIN: 151-831-387
+2025-02-28 08:30:56,500 - INFO - 127.0.0.1 - - [28/Feb/2025 08:30:56] "GET / HTTP/1.1" 200 -
+2025-02-28 08:30:56,756 - INFO - 127.0.0.1 - - [28/Feb/2025 08:30:56] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:30:56,786 - INFO - 127.0.0.1 - - [28/Feb/2025 08:30:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-28 08:31:05,551 - INFO - BEGIN (implicit)
+2025-02-28 08:31:05,556 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:31:05,556 - INFO - [generated in 0.00098s] ('ahmed', 1, 0)
+2025-02-28 08:31:05,778 - INFO - User 'ahmed' logged in successfully.
+2025-02-28 08:31:05,778 - INFO - ROLLBACK
+2025-02-28 08:31:05,778 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:05] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:31:07,094 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:07] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:31:07,134 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:07] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:31:07,150 - INFO - BEGIN (implicit)
+2025-02-28 08:31:07,155 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:07,158 - INFO - [generated in 0.00461s] ('4f817301-d045-4cad-b476-8419ae9f59df',)
+2025-02-28 08:31:07,162 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:07,163 - INFO - [generated in 0.00141s] ('ahmed',)
+2025-02-28 08:31:07,167 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:31:07,167 - INFO - [generated in 0.00054s] ('ahmed',)
+2025-02-28 08:31:07,173 - INFO - ROLLBACK
+2025-02-28 08:31:07,173 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:07] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:31:16,350 - INFO - BEGIN (implicit)
+2025-02-28 08:31:16,352 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:31:16,352 - INFO - [cached since 10.8s ago] ('bobby', 1, 0)
+2025-02-28 08:31:16,585 - INFO - User 'bobby' logged in successfully.
+2025-02-28 08:31:16,585 - INFO - ROLLBACK
+2025-02-28 08:31:16,585 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:16] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:31:17,779 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:17] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:31:17,809 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:31:17,814 - INFO - BEGIN (implicit)
+2025-02-28 08:31:17,817 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:17,817 - INFO - [cached since 10.66s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:17,817 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:17,820 - INFO - [cached since 10.66s ago] ('bobby',)
+2025-02-28 08:31:17,823 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:31:17,823 - INFO - [cached since 10.66s ago] ('bobby',)
+2025-02-28 08:31:17,827 - INFO - ROLLBACK
+2025-02-28 08:31:17,828 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:17] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:31:28,605 - INFO - BEGIN (implicit)
+2025-02-28 08:31:28,605 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:28,605 - INFO - [cached since 21.45s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:28,605 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:28,611 - INFO - [cached since 21.45s ago] ('bobby',)
+2025-02-28 08:31:28,618 - INFO - INSERT INTO tasks (user, title, completed) VALUES (?, ?, ?)
+2025-02-28 08:31:28,618 - INFO - [generated in 0.00136s] ('bobby', 'play games', 0)
+2025-02-28 08:31:28,623 - INFO - COMMIT
+2025-02-28 08:31:28,628 - INFO - Task 'play games' created by user 'bobby'.
+2025-02-28 08:31:28,632 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:28] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 201 -
+2025-02-28 08:31:28,642 - INFO - BEGIN (implicit)
+2025-02-28 08:31:28,643 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:28,643 - INFO - [cached since 21.49s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:28,647 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:28,647 - INFO - [cached since 21.48s ago] ('bobby',)
+2025-02-28 08:31:28,647 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:31:28,647 - INFO - [cached since 21.48s ago] ('bobby',)
+2025-02-28 08:31:28,655 - INFO - ROLLBACK
+2025-02-28 08:31:28,655 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:28] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:31:29,901 - INFO - BEGIN (implicit)
+2025-02-28 08:31:29,901 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:29,901 - INFO - [cached since 22.75s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:29,901 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:29,901 - INFO - [cached since 22.75s ago] ('bobby',)
+2025-02-28 08:31:29,913 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.id = ?
+2025-02-28 08:31:29,916 - INFO - [generated in 0.00114s] (5,)
+2025-02-28 08:31:29,923 - INFO - UPDATE tasks SET completed=? WHERE tasks.id = ?
+2025-02-28 08:31:29,923 - INFO - [generated in 0.00135s] (1, 5)
+2025-02-28 08:31:29,936 - INFO - COMMIT
+2025-02-28 08:31:29,945 - INFO - BEGIN (implicit)
+2025-02-28 08:31:29,947 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.id = ?
+2025-02-28 08:31:29,948 - INFO - [generated in 0.00121s] (5,)
+2025-02-28 08:31:29,948 - INFO - ROLLBACK
+2025-02-28 08:31:29,954 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:29] "PUT /api/tasks/5 HTTP/1.1" 200 -
+2025-02-28 08:31:29,964 - INFO - BEGIN (implicit)
+2025-02-28 08:31:29,964 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:29,964 - INFO - [cached since 22.81s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:29,971 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:29,971 - INFO - [cached since 22.81s ago] ('bobby',)
+2025-02-28 08:31:29,974 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:31:29,974 - INFO - [cached since 22.81s ago] ('bobby',)
+2025-02-28 08:31:29,978 - INFO - ROLLBACK
+2025-02-28 08:31:29,980 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:29] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:31:30,541 - INFO - BEGIN (implicit)
+2025-02-28 08:31:30,546 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:30,548 - INFO - [cached since 23.39s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:30,555 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:30,557 - INFO - [cached since 23.4s ago] ('bobby',)
+2025-02-28 08:31:30,557 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.id = ?
+2025-02-28 08:31:30,561 - INFO - [cached since 0.6475s ago] (5,)
+2025-02-28 08:31:30,565 - INFO - UPDATE tasks SET completed=? WHERE tasks.id = ?
+2025-02-28 08:31:30,568 - INFO - [cached since 0.6443s ago] (0, 5)
+2025-02-28 08:31:30,570 - INFO - COMMIT
+2025-02-28 08:31:30,577 - INFO - BEGIN (implicit)
+2025-02-28 08:31:30,581 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.id = ?
+2025-02-28 08:31:30,585 - INFO - [cached since 0.6382s ago] (5,)
+2025-02-28 08:31:30,589 - INFO - ROLLBACK
+2025-02-28 08:31:30,589 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:30] "PUT /api/tasks/5 HTTP/1.1" 200 -
+2025-02-28 08:31:30,595 - INFO - BEGIN (implicit)
+2025-02-28 08:31:30,595 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:31:30,599 - INFO - [cached since 23.44s ago] ('ee3d1597-04e4-4f90-83ee-69ce81f571cc',)
+2025-02-28 08:31:30,603 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:31:30,609 - INFO - [cached since 23.45s ago] ('bobby',)
+2025-02-28 08:31:30,609 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:31:30,609 - INFO - [cached since 23.44s ago] ('bobby',)
+2025-02-28 08:31:30,609 - INFO - ROLLBACK
+2025-02-28 08:31:30,609 - INFO - 127.0.0.1 - - [28/Feb/2025 08:31:30] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:35:06,948 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:06] "GET / HTTP/1.1" 200 -
+2025-02-28 08:35:06,971 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:06] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:35:08,320 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:08] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:35:08,337 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:08] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:35:33,138 - INFO - BEGIN (implicit)
+2025-02-28 08:35:33,141 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:35:33,141 - INFO - [cached since 267.6s ago] ('aadhil', 1, 0)
+2025-02-28 08:35:33,398 - INFO - INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)
+2025-02-28 08:35:33,398 - INFO - [generated in 0.00083s] ('fa7cf2d4-1d79-4d9b-9376-529ffa5e2323', 'aadhil', 'aadhil@gmail.com', 'scrypt:32768:8:1$GrzaNTEkcgJqs5Ki$c595f1c22cac8c45261ae5f7115544e6cd910e4aaa820e68a9acc6d4038ab626a25e5313a1395cd4c9d3a242c625dd706b0d777ec3f1f59792191a338203c756')
+2025-02-28 08:35:33,398 - INFO - COMMIT
+2025-02-28 08:35:33,405 - INFO - BEGIN (implicit)
+2025-02-28 08:35:33,408 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.id = ?
+2025-02-28 08:35:33,408 - INFO - [generated in 0.00107s] ('fa7cf2d4-1d79-4d9b-9376-529ffa5e2323',)
+2025-02-28 08:35:33,408 - INFO - User 'aadhil' registered successfully.
+2025-02-28 08:35:33,408 - INFO - ROLLBACK
+2025-02-28 08:35:33,408 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:33] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-02-28 08:35:34,811 - INFO - 127.0.0.1 - - [28/Feb/2025 08:35:34] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-02-28 08:36:03,799 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:03] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-02-28 08:36:04,645 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:04] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-02-28 08:36:12,792 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-28 08:36:12,792 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 08:36:12,795 - INFO -  * Restarting with stat
+2025-02-28 08:36:13,332 - WARNING -  * Debugger is active!
+2025-02-28 08:36:13,334 - INFO -  * Debugger PIN: 151-831-387
+2025-02-28 08:36:21,252 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:21] "GET / HTTP/1.1" 200 -
+2025-02-28 08:36:21,354 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:21] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:36:25,361 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:25] "GET / HTTP/1.1" 200 -
+2025-02-28 08:36:25,376 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:25] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:36:31,683 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:31] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:36:31,696 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:31] "GET /static/js/register.js HTTP/1.1" 200 -
+2025-02-28 08:36:49,382 - INFO - BEGIN (implicit)
+2025-02-28 08:36:49,388 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:36:49,390 - INFO - [generated in 0.00075s] ('kfaa', 1, 0)
+2025-02-28 08:36:49,618 - INFO - INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)
+2025-02-28 08:36:49,618 - INFO - [generated in 0.00091s] ('9e736d7b-e1be-48a1-b67e-cc7dfacbe3f0', 'kfaa', 'kfaa@gmail.com', 'scrypt:32768:8:1$RiioeyqMiYeXCsif$39fe41f1d9e70e7fb2498e32dc98e31794297f1bfd767f2148f1189f43f55621307e966f8121249de8fb585ad9e6a6af7e6c9cb5aade7f8b931fc0c701be925b')
+2025-02-28 08:36:49,618 - INFO - COMMIT
+2025-02-28 08:36:49,634 - INFO - BEGIN (implicit)
+2025-02-28 08:36:49,638 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.id = ?
+2025-02-28 08:36:49,638 - INFO - [generated in 0.00087s] ('9e736d7b-e1be-48a1-b67e-cc7dfacbe3f0',)
+2025-02-28 08:36:49,638 - INFO - User 'kfaa' registered successfully.
+2025-02-28 08:36:49,638 - INFO - ROLLBACK
+2025-02-28 08:36:49,642 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:49] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-02-28 08:36:50,830 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:50] "GET / HTTP/1.1" 200 -
+2025-02-28 08:36:50,850 - INFO - 127.0.0.1 - - [28/Feb/2025 08:36:50] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:37:02,291 - INFO - BEGIN (implicit)
+2025-02-28 08:37:02,294 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:37:02,294 - INFO - [cached since 12.9s ago] ('Kfaa', 1, 0)
+2025-02-28 08:37:02,295 - WARNING - Login failed: Invalid credentials for username 'Kfaa'.
+2025-02-28 08:37:02,295 - INFO - ROLLBACK
+2025-02-28 08:37:02,295 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:02] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+2025-02-28 08:37:11,678 - INFO - BEGIN (implicit)
+2025-02-28 08:37:11,678 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:37:11,678 - INFO - [cached since 22.29s ago] ('ahmed', 1, 0)
+2025-02-28 08:37:11,911 - INFO - User 'ahmed' logged in successfully.
+2025-02-28 08:37:11,911 - INFO - ROLLBACK
+2025-02-28 08:37:11,911 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:11] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:37:13,353 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:13] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:37:13,375 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:13] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:37:13,390 - INFO - BEGIN (implicit)
+2025-02-28 08:37:13,395 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:37:13,398 - INFO - [generated in 0.00318s] ('6981981d-d800-4da1-a765-cc8006fd3c34',)
+2025-02-28 08:37:13,411 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:37:13,411 - INFO - [generated in 0.00100s] ('ahmed',)
+2025-02-28 08:37:13,415 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:37:13,419 - INFO - [generated in 0.00106s] ('ahmed',)
+2025-02-28 08:37:13,422 - INFO - ROLLBACK
+2025-02-28 08:37:13,422 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:13] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:37:38,121 - INFO - BEGIN (implicit)
+2025-02-28 08:37:38,122 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:37:38,122 - INFO - [cached since 48.73s ago] ('kfaa', 1, 0)
+2025-02-28 08:37:38,347 - INFO - User 'kfaa' logged in successfully.
+2025-02-28 08:37:38,347 - INFO - ROLLBACK
+2025-02-28 08:37:38,347 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:38] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:37:40,615 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:40] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:37:40,636 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:37:40,644 - INFO - BEGIN (implicit)
+2025-02-28 08:37:40,646 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:37:40,646 - INFO - [cached since 27.25s ago] ('e830d567-217e-4535-ae2e-c16165bdb550',)
+2025-02-28 08:37:40,649 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:37:40,649 - INFO - [cached since 27.24s ago] ('kfaa',)
+2025-02-28 08:37:40,651 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:37:40,652 - INFO - [cached since 27.24s ago] ('kfaa',)
+2025-02-28 08:37:40,654 - INFO - ROLLBACK
+2025-02-28 08:37:40,656 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:40] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:37:49,746 - INFO - BEGIN (implicit)
+2025-02-28 08:37:49,746 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:37:49,746 - INFO - [cached since 36.35s ago] ('e830d567-217e-4535-ae2e-c16165bdb550',)
+2025-02-28 08:37:49,751 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:37:49,751 - INFO - [cached since 36.34s ago] ('kfaa',)
+2025-02-28 08:37:49,758 - INFO - INSERT INTO tasks (user, title, completed) VALUES (?, ?, ?)
+2025-02-28 08:37:49,758 - INFO - [generated in 0.00104s] ('kfaa', 'buy Groceries', 0)
+2025-02-28 08:37:49,762 - INFO - COMMIT
+2025-02-28 08:37:49,772 - INFO - Task 'buy Groceries' created by user 'kfaa'.
+2025-02-28 08:37:49,772 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:49] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 201 -
+2025-02-28 08:37:49,778 - INFO - BEGIN (implicit)
+2025-02-28 08:37:49,781 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:37:49,784 - INFO - [cached since 36.39s ago] ('e830d567-217e-4535-ae2e-c16165bdb550',)
+2025-02-28 08:37:49,787 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:37:49,787 - INFO - [cached since 36.38s ago] ('kfaa',)
+2025-02-28 08:37:49,794 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:37:49,798 - INFO - [cached since 36.38s ago] ('kfaa',)
+2025-02-28 08:37:49,800 - INFO - ROLLBACK
+2025-02-28 08:37:49,800 - INFO - 127.0.0.1 - - [28/Feb/2025 08:37:49] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:38:40,262 - INFO - BEGIN (implicit)
+2025-02-28 08:38:40,267 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:38:40,267 - INFO - [cached since 110.9s ago] ('kfaa', 1, 0)
+2025-02-28 08:38:40,479 - INFO - User 'kfaa' logged in successfully.
+2025-02-28 08:38:40,479 - INFO - ROLLBACK
+2025-02-28 08:38:40,481 - INFO - 127.0.0.1 - - [28/Feb/2025 08:38:40] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:38:41,616 - INFO - 127.0.0.1 - - [28/Feb/2025 08:38:41] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:38:41,650 - INFO - 127.0.0.1 - - [28/Feb/2025 08:38:41] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:38:41,665 - INFO - BEGIN (implicit)
+2025-02-28 08:38:41,665 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:38:41,667 - INFO - [cached since 88.27s ago] ('e2009a5b-5f16-49ac-a9d9-3425d173491c',)
+2025-02-28 08:38:41,668 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:38:41,668 - INFO - [cached since 88.26s ago] ('kfaa',)
+2025-02-28 08:38:41,669 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:38:41,671 - INFO - [cached since 88.26s ago] ('kfaa',)
+2025-02-28 08:38:41,673 - INFO - ROLLBACK
+2025-02-28 08:38:41,675 - INFO - 127.0.0.1 - - [28/Feb/2025 08:38:41] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:41:25,665 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:25] "GET / HTTP/1.1" 200 -
+2025-02-28 08:41:25,687 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:25] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-02-28 08:41:25,697 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:25] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:41:28,341 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:28] "GET / HTTP/1.1" 200 -
+2025-02-28 08:41:28,361 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:28] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:41:28,364 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:28] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:41:40,877 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:40] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:41:40,904 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:40] "GET /static/css/register.css HTTP/1.1" 200 -
+2025-02-28 08:41:40,909 - INFO - 127.0.0.1 - - [28/Feb/2025 08:41:40] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:34,214 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:34] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:43:34,237 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:34] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2025-02-28 08:43:34,242 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:34] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:35,026 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:35] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:43:35,056 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:35] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2025-02-28 08:43:35,062 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:35] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:36,088 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:36] "GET / HTTP/1.1" 200 -
+2025-02-28 08:43:36,116 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:36] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-02-28 08:43:36,116 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:36] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:37,375 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:37] "GET / HTTP/1.1" 200 -
+2025-02-28 08:43:37,399 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:37] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:43:37,400 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:37] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:50,724 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:50] "GET / HTTP/1.1" 200 -
+2025-02-28 08:43:50,756 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:50] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-02-28 08:43:50,761 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:50] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:51,522 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:51] "GET / HTTP/1.1" 200 -
+2025-02-28 08:43:51,551 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:51] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:43:51,551 - INFO - 127.0.0.1 - - [28/Feb/2025 08:43:51] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:44:47,975 - INFO - 127.0.0.1 - - [28/Feb/2025 08:44:47] "GET / HTTP/1.1" 200 -
+2025-02-28 08:44:48,009 - INFO - 127.0.0.1 - - [28/Feb/2025 08:44:48] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-02-28 08:44:48,009 - INFO - 127.0.0.1 - - [28/Feb/2025 08:44:48] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:44:53,286 - INFO - 127.0.0.1 - - [28/Feb/2025 08:44:53] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:45:13,314 - INFO - BEGIN (implicit)
+2025-02-28 08:45:13,315 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:45:13,317 - INFO - [cached since 503.9s ago] ('Kfaa', 1, 0)
+2025-02-28 08:45:13,317 - WARNING - Login failed: Invalid credentials for username 'Kfaa'.
+2025-02-28 08:45:13,317 - INFO - ROLLBACK
+2025-02-28 08:45:13,317 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:13] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+2025-02-28 08:45:18,213 - INFO - BEGIN (implicit)
+2025-02-28 08:45:18,214 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:45:18,214 - INFO - [cached since 508.8s ago] ('Kfaa', 1, 0)
+2025-02-28 08:45:18,214 - WARNING - Login failed: Invalid credentials for username 'Kfaa'.
+2025-02-28 08:45:18,214 - INFO - ROLLBACK
+2025-02-28 08:45:18,214 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:18] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+2025-02-28 08:45:22,070 - INFO - BEGIN (implicit)
+2025-02-28 08:45:22,070 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:45:22,070 - INFO - [cached since 512.7s ago] ('Kfaa', 1, 0)
+2025-02-28 08:45:22,070 - WARNING - Login failed: Invalid credentials for username 'Kfaa'.
+2025-02-28 08:45:22,070 - INFO - ROLLBACK
+2025-02-28 08:45:22,070 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:22] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+2025-02-28 08:45:26,598 - INFO - BEGIN (implicit)
+2025-02-28 08:45:26,598 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:45:26,598 - INFO - [cached since 517.2s ago] ('Kfaa', 1, 0)
+2025-02-28 08:45:26,602 - WARNING - Login failed: Invalid credentials for username 'Kfaa'.
+2025-02-28 08:45:26,602 - INFO - ROLLBACK
+2025-02-28 08:45:26,602 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:26] "[31m[1mPOST /auth/login HTTP/1.1[0m" 400 -
+2025-02-28 08:45:35,851 - INFO - BEGIN (implicit)
+2025-02-28 08:45:35,851 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:45:35,851 - INFO - [cached since 526.5s ago] ('bobby', 1, 0)
+2025-02-28 08:45:36,084 - INFO - User 'bobby' logged in successfully.
+2025-02-28 08:45:36,084 - INFO - ROLLBACK
+2025-02-28 08:45:36,084 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:36] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:45:37,443 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:37] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:45:37,506 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:37] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-02-28 08:45:37,506 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:37] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:45:37,529 - INFO - BEGIN (implicit)
+2025-02-28 08:45:37,531 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:45:37,531 - INFO - [cached since 504.1s ago] ('679e5114-6cff-4ef7-a2a0-f057c4597c4c',)
+2025-02-28 08:45:37,535 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:45:37,584 - INFO - [cached since 504.2s ago] ('bobby',)
+2025-02-28 08:45:37,595 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:45:37,595 - INFO - [cached since 504.2s ago] ('bobby',)
+2025-02-28 08:45:37,596 - INFO - ROLLBACK
+2025-02-28 08:45:37,597 - INFO - 127.0.0.1 - - [28/Feb/2025 08:45:37] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:46:26,250 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:26] "GET / HTTP/1.1" 200 -
+2025-02-28 08:46:26,280 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:26] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-02-28 08:46:26,286 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:26] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:46:28,761 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:28] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:46:28,786 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:28] "GET /static/css/register.css HTTP/1.1" 200 -
+2025-02-28 08:46:28,786 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:28] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:46:29,690 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:29] "GET / HTTP/1.1" 200 -
+2025-02-28 08:46:29,722 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:29] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:46:29,724 - INFO - 127.0.0.1 - - [28/Feb/2025 08:46:29] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:47:08,959 - INFO - BEGIN (implicit)
+2025-02-28 08:47:08,961 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:47:08,961 - INFO - [cached since 619.6s ago] ('killerbee', 1, 0)
+2025-02-28 08:47:09,194 - INFO - INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)
+2025-02-28 08:47:09,194 - INFO - [cached since 619.6s ago] ('9e736d7b-e1be-48a1-b67e-cc7dfacbe3f0', 'killerbee', 'killerbee@gmail.com', 'scrypt:32768:8:1$UkkWhJSAmGoeTi5z$d4494bbe9088e1cdbf011d64f54f5ae1b784b786435e849e4000aac1aa40da7f9903efc0f4b0433ca9506e6fee90f9bd33cbc1719c44157dd482f1268fde555a')
+2025-02-28 08:47:09,194 - INFO - ROLLBACK
+2025-02-28 08:47:09,362 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:09] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+2025-02-28 08:47:12,178 - INFO - BEGIN (implicit)
+2025-02-28 08:47:12,178 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:47:12,182 - INFO - [cached since 622.8s ago] ('killerbee', 1, 0)
+2025-02-28 08:47:12,432 - INFO - INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)
+2025-02-28 08:47:12,432 - INFO - [cached since 622.8s ago] ('9e736d7b-e1be-48a1-b67e-cc7dfacbe3f0', 'killerbee', 'killerbee@gmail.com', 'scrypt:32768:8:1$eCM3YtDgKJpTAZvb$541b792df1a4db0a0c21bed4168771010fc799a03f6ef7ee1acf7da634e7585d58305fb552692de76dd675522b0740610186deb0f6c8f88ba7e93e53d92e57a1')
+2025-02-28 08:47:12,432 - INFO - ROLLBACK
+2025-02-28 08:47:12,470 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:12] "[35m[1mPOST /auth/register HTTP/1.1[0m" 500 -
+2025-02-28 08:47:40,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-28 08:47:40,344 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 08:47:40,345 - INFO -  * Restarting with stat
+2025-02-28 08:47:40,908 - WARNING -  * Debugger is active!
+2025-02-28 08:47:40,912 - INFO -  * Debugger PIN: 151-831-387
+2025-02-28 08:47:41,777 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:41] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:47:41,879 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:41] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:47:41,881 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:41] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2025-02-28 08:47:42,625 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:47:42,649 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2025-02-28 08:47:42,653 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:47:42,816 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "GET /register HTTP/1.1" 200 -
+2025-02-28 08:47:42,846 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "[36mGET /static/css/register.css HTTP/1.1[0m" 304 -
+2025-02-28 08:47:42,850 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:42] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2025-02-28 08:47:50,621 - INFO - BEGIN (implicit)
+2025-02-28 08:47:50,628 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:47:50,628 - INFO - [generated in 0.00089s] ('killerbee', 1, 0)
+2025-02-28 08:47:50,867 - INFO - INSERT INTO users (id, username, email, password) VALUES (?, ?, ?, ?)
+2025-02-28 08:47:50,867 - INFO - [generated in 0.00127s] ('af662c02-da3d-442e-b1b9-31a4bd4258d5', 'killerbee', 'killerbee@gmail.com', 'scrypt:32768:8:1$Kfk2ASIcXSssQn17$dff7eb5ab94d8ebc444487271455f90e6fe33d25442fd0e01b4bd8583f1773133ffa1d6e96b7c7f17fd9884fc76416b8b43385b9e3ac4de296fb23b69c77dd17')
+2025-02-28 08:47:50,883 - INFO - COMMIT
+2025-02-28 08:47:50,886 - INFO - BEGIN (implicit)
+2025-02-28 08:47:50,890 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.id = ?
+2025-02-28 08:47:50,892 - INFO - [generated in 0.00164s] ('af662c02-da3d-442e-b1b9-31a4bd4258d5',)
+2025-02-28 08:47:50,892 - INFO - User 'killerbee' registered successfully.
+2025-02-28 08:47:50,892 - INFO - ROLLBACK
+2025-02-28 08:47:50,895 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:50] "[35m[1mPOST /auth/register HTTP/1.1[0m" 201 -
+2025-02-28 08:47:52,427 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:52] "GET / HTTP/1.1" 200 -
+2025-02-28 08:47:52,475 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:52] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:47:52,476 - INFO - 127.0.0.1 - - [28/Feb/2025 08:47:52] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:48:02,562 - INFO - BEGIN (implicit)
+2025-02-28 08:48:02,562 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:48:02,562 - INFO - [cached since 11.94s ago] ('killerbee', 1, 0)
+2025-02-28 08:48:02,821 - INFO - User 'killerbee' logged in successfully.
+2025-02-28 08:48:02,821 - INFO - ROLLBACK
+2025-02-28 08:48:02,821 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:02] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:48:03,809 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:03] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:48:03,835 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:03] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-02-28 08:48:03,837 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:03] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:48:03,853 - INFO - BEGIN (implicit)
+2025-02-28 08:48:03,856 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:48:03,861 - INFO - [generated in 0.00452s] ('7f19497e-030a-4113-acdf-156b6b892c66',)
+2025-02-28 08:48:03,863 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:48:03,864 - INFO - [generated in 0.00103s] ('killerbee',)
+2025-02-28 08:48:03,866 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:48:03,867 - INFO - [generated in 0.00080s] ('killerbee',)
+2025-02-28 08:48:03,869 - INFO - ROLLBACK
+2025-02-28 08:48:03,870 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:03] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:48:14,958 - INFO - BEGIN (implicit)
+2025-02-28 08:48:14,960 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:48:14,960 - INFO - [cached since 11.11s ago] ('7f19497e-030a-4113-acdf-156b6b892c66',)
+2025-02-28 08:48:14,960 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:48:14,964 - INFO - [cached since 11.1s ago] ('killerbee',)
+2025-02-28 08:48:14,964 - INFO - INSERT INTO tasks (user, title, completed) VALUES (?, ?, ?)
+2025-02-28 08:48:14,974 - INFO - [generated in 0.00289s] ('killerbee', 'tame beasts', 0)
+2025-02-28 08:48:14,976 - INFO - COMMIT
+2025-02-28 08:48:14,988 - INFO - Task 'tame beasts' created by user 'killerbee'.
+2025-02-28 08:48:14,992 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:14] "[35m[1mPOST /api/tasks HTTP/1.1[0m" 201 -
+2025-02-28 08:48:15,000 - INFO - BEGIN (implicit)
+2025-02-28 08:48:15,006 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:48:15,009 - INFO - [cached since 11.15s ago] ('7f19497e-030a-4113-acdf-156b6b892c66',)
+2025-02-28 08:48:15,011 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:48:15,011 - INFO - [cached since 11.15s ago] ('killerbee',)
+2025-02-28 08:48:15,011 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:48:15,011 - INFO - [cached since 11.15s ago] ('killerbee',)
+2025-02-28 08:48:15,011 - INFO - ROLLBACK
+2025-02-28 08:48:15,011 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:15] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:48:20,364 - INFO - BEGIN (implicit)
+2025-02-28 08:48:20,365 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 08:48:20,367 - INFO - [cached since 29.74s ago] ('killerbee', 1, 0)
+2025-02-28 08:48:20,637 - INFO - User 'killerbee' logged in successfully.
+2025-02-28 08:48:20,639 - INFO - ROLLBACK
+2025-02-28 08:48:20,640 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:20] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 08:48:21,532 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:21] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:48:21,570 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:21] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-02-28 08:48:21,573 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:48:21,592 - INFO - BEGIN (implicit)
+2025-02-28 08:48:21,594 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:48:21,594 - INFO - [cached since 17.74s ago] ('1fa3e824-0560-43bd-a272-d2ebc4652448',)
+2025-02-28 08:48:21,597 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:48:21,597 - INFO - [cached since 17.74s ago] ('killerbee',)
+2025-02-28 08:48:21,598 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:48:21,598 - INFO - [cached since 17.73s ago] ('killerbee',)
+2025-02-28 08:48:21,603 - INFO - ROLLBACK
+2025-02-28 08:48:21,603 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:21] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:48:29,944 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:29] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:48:29,966 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:29] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-02-28 08:48:29,969 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:29] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:48:29,973 - INFO - BEGIN (implicit)
+2025-02-28 08:48:29,977 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:48:29,979 - INFO - [cached since 26.13s ago] ('1fa3e824-0560-43bd-a272-d2ebc4652448',)
+2025-02-28 08:48:29,982 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:48:29,983 - INFO - [cached since 26.12s ago] ('killerbee',)
+2025-02-28 08:48:29,985 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:48:29,985 - INFO - [cached since 26.12s ago] ('killerbee',)
+2025-02-28 08:48:29,987 - INFO - ROLLBACK
+2025-02-28 08:48:29,987 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:29] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 08:48:46,902 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:46] "GET / HTTP/1.1" 200 -
+2025-02-28 08:48:46,930 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:46] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:48:46,934 - INFO - 127.0.0.1 - - [28/Feb/2025 08:48:46] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:49:03,788 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-28 08:49:03,788 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 08:49:03,788 - INFO -  * Restarting with stat
+2025-02-28 08:49:04,301 - WARNING -  * Debugger is active!
+2025-02-28 08:49:04,303 - INFO -  * Debugger PIN: 151-831-387
+2025-02-28 08:49:35,659 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:35] "GET / HTTP/1.1" 200 -
+2025-02-28 08:49:35,906 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:35] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 08:49:35,932 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:35] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2025-02-28 08:49:36,048 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-28 08:49:49,290 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:49] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 08:49:49,308 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:49] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-02-28 08:49:49,311 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:49] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 08:49:49,336 - INFO - BEGIN (implicit)
+2025-02-28 08:49:49,351 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 08:49:49,355 - INFO - [generated in 0.00303s] ('1fa3e824-0560-43bd-a272-d2ebc4652448',)
+2025-02-28 08:49:49,358 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 08:49:49,358 - INFO - [generated in 0.00067s] ('killerbee',)
+2025-02-28 08:49:49,361 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 08:49:49,362 - INFO - [generated in 0.00154s] ('killerbee',)
+2025-02-28 08:49:49,364 - INFO - ROLLBACK
+2025-02-28 08:49:49,366 - INFO - 127.0.0.1 - - [28/Feb/2025 08:49:49] "GET /api/tasks HTTP/1.1" 200 -
+2025-02-28 09:29:55,574 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-28 09:29:55,574 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-28 09:29:55,576 - INFO -  * Restarting with stat
+2025-02-28 09:29:56,101 - WARNING -  * Debugger is active!
+2025-02-28 09:29:56,101 - INFO -  * Debugger PIN: 151-831-387
+2025-02-28 09:30:05,611 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:05] "GET / HTTP/1.1" 200 -
+2025-02-28 09:30:06,291 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:06] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2025-02-28 09:30:06,321 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-28 09:30:10,439 - INFO - BEGIN (implicit)
+2025-02-28 09:30:10,443 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+ LIMIT ? OFFSET ?
+2025-02-28 09:30:10,443 - INFO - [generated in 0.00083s] ('ahmed', 1, 0)
+2025-02-28 09:30:10,619 - INFO - User 'ahmed' logged in successfully.
+2025-02-28 09:30:10,619 - INFO - ROLLBACK
+2025-02-28 09:30:10,619 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:10] "POST /auth/login HTTP/1.1" 200 -
+2025-02-28 09:30:12,540 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:12] "GET /dashboard HTTP/1.1" 200 -
+2025-02-28 09:30:12,573 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:12] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-02-28 09:30:12,575 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:12] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-02-28 09:30:12,595 - INFO - BEGIN (implicit)
+2025-02-28 09:30:12,602 - INFO - SELECT token_blocklist.id AS token_blocklist_id, token_blocklist.jti AS token_blocklist_jti, token_blocklist.created_at AS token_blocklist_created_at 
+FROM token_blocklist 
+WHERE token_blocklist.jti = ?
+2025-02-28 09:30:12,602 - INFO - [generated in 0.00120s] ('2717ed03-ed55-475f-ae21-7e6a14c9990d',)
+2025-02-28 09:30:12,606 - INFO - SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password AS users_password 
+FROM users 
+WHERE users.username = ?
+2025-02-28 09:30:12,606 - INFO - [generated in 0.00070s] ('ahmed',)
+2025-02-28 09:30:12,609 - INFO - SELECT tasks.id AS tasks_id, tasks.user AS tasks_user, tasks.title AS tasks_title, tasks.completed AS tasks_completed 
+FROM tasks 
+WHERE tasks.user = ?
+2025-02-28 09:30:12,611 - INFO - [generated in 0.00103s] ('ahmed',)
+2025-02-28 09:30:12,615 - INFO - ROLLBACK
+2025-02-28 09:30:12,616 - INFO - 127.0.0.1 - - [28/Feb/2025 09:30:12] "GET /api/tasks HTTP/1.1" 200 -
