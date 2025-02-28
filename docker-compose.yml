@@ -1,0 +1,4 @@
+services:
+  flask-app:
+    environment:
+      - FLASK_DEBUG=0
