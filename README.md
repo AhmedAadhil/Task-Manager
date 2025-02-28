@@ -1,5 +1,6 @@
 # Task-Manager
 A fully functional Task Manager app with authentication capable of authenticating and displaying tasks of each user respectively
+Entry point of the application is "app.py"
 
 Key Features :
 
